@@ -1,0 +1,16 @@
+﻿{
+  "name": "vue-pdf-shower",
+  "version": "1.0.3",
+  "description": "一款基于pdf.js的vue pdf查看组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "pdf",
+    "viewer"
+  ],
+  "author": "tjyoung",
+  "license": "MIT"
+}
