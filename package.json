@@ -1,6 +1,6 @@
 ﻿{
   "name": "vue-pdf-shower",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "一款基于pdf.js的vue pdf查看组件",
   "main": "index.js",
   "scripts": {

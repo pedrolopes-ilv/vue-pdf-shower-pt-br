@@ -14,7 +14,8 @@
  */
 'use strict';
 let PDFJS = require('./dist/pdf.js');
-PDFJS.workerSrc = './dist/pdf.worker.js';
+PDFJS.PDFJS.disableWorker = true;
+// PDFJS.workerSrc = './dist/pdf.worker.js';
 export default {
     name: 'pdf-shower',
     props: {
