@@ -4,6 +4,8 @@
 > 基于pdf.js的pdf简易查看组件。
 > 该组件加载全部pdf页面，不提供翻页查看功能。
 
+## github
+[vue-pdf-shower](https://github.com/TJ666/vue-pdf-shower)
 ## install
 ```
 npm i vue-pdf-shower --save
