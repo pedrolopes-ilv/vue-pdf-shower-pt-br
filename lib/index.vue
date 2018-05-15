@@ -33,19 +33,19 @@ export default {
             pageRendering: false,
             pageNumPending: null,
             isloading: true,
-            loadingTxt: '拼命加载中...'
+            loadingTxt: 'Carregando...'
         };
     },
     mounted() {
         let me = this;
         let cvsWraper = document.getElementById('cvsWraper');
-        // 异步加载pdf
+        // Criação do wrapper do pdf
         PDFJS.getDocument(me.pdfurl).then(function (pafObj) {
             me.isloading = true;
             me.pdfDoc = pafObj;
             let totalNum = me.pdfDoc.numPages;
 
-            // 循环渲染所有canvas
+            // Geração do canvas
             for (let i = 1; i <= totalNum; i++) {
                 let id = `canvas${i}`;
                 let cvsNode = document.createElement('canvas');
@@ -59,25 +59,25 @@ export default {
                 }
             }
         }).catch(function (err) {
-            me.loadingTxt = '加载失败，请稍后重试';
+            me.loadingTxt = 'Não foi possível carregar o documento solicitado';
             me.$emit('onErr', err);
         });
     },
     methods: {
-        // 渲染页面
+        // Renderizar número de páginas
         renderPage(num) {
             let me = this;
             let id = `canvas${num}`;
             let canvas = document.getElementById(id);
             let ctx = canvas.getContext('2d');
             me.pageRendering = true;
-            // 通过promise获得pdf指定页面
+            // Promise de requisição do número da página
             me.pdfDoc.getPage(num).then(function (page) {
                 let viewport = page.getViewport(me.scale);
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
 
-                // 将pdf渲染到canvas中
+                // Renderização do PDF dentro do Canvas
                 let renderContext = {
                     canvasContext: ctx,
                     viewport: viewport
@@ -94,7 +94,7 @@ export default {
     margin: 0 auto;
     position: relative;
     overflow-y: scroll;
-    height: 700px;
+    height: 450px;
     border: 1px solid #ccc;
 }
 .canvas-item {
