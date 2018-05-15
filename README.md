@@ -3,7 +3,7 @@
 ## Componente Vue pra exibição de pdfs.
 > O componente utilizada a biblioteca PDFJS para buscar e retornar o documento desejado na tela.
 
-## github(Original)
+## Link github para o projeto fonte
 [vue-pdf-shower](https://github.com/TJ666/vue-pdf-shower)
 ## install
 ```
