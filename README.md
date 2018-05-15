@@ -1,10 +1,9 @@
 # vue-pdf-shower
 
-## 介绍
-> 基于pdf.js的pdf简易查看组件。
-> 该组件加载全部pdf页面，不提供翻页查看功能。
+## Componente Vue pra exibição de pdfs.
+> O componente utilizada a biblioteca PDFJS para buscar e retornar o documento desejado na tela.
 
-## github
+## github(Original)
 [vue-pdf-shower](https://github.com/TJ666/vue-pdf-shower)
 ## install
 ```
@@ -31,17 +30,17 @@ export default {
     },
     data() {
         return {
-            // 所查看的pdf url
+            // Url do PDF
             pdfurls: '//cdn.mozilla.net/pdfjs/tracemonkey.pdf',
-            // 缩放 默认为1
+            // Padrão: 1
             scale: 1.2
         };
     },
     methods: {
-        // 加载失败的callback
+        // callback
         onErr(err) {
-            console.log('pdf加载失败，请重试');
-            console.log('错误信息：', err);
+            console.log('Não foi possível exibir o pdf desejado');
+            console.log('Erro：', err);
         }
     }
 };
